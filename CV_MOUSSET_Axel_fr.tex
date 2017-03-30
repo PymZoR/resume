@@ -1,5 +1,7 @@
 \documentclass[11pt, a4paper, sans]{moderncv}
 
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
 \usepackage{textcomp}
 \usepackage{fontawesome}
 \usepackage[scale=0.85]{geometry}
@@ -28,65 +30,75 @@
 
 
 \name{Axel}{Mousset}
-\title{Etudiant ingénieur en informatique}
-\address{4 rue Jean-Louis Delaporte}{10000 Troyes}{}
+\title{Etudiant ingénieur en génie logiciel}
+\address{7 rue Adolphe Thiers}{10000 Troyes}{}
 \phone[mobile]{06.46.73.95.77}
-\email{axel@mousset.me}
-\homepage{http://blog.mousset.me}
+\email{axel.mousset@utt.fr}
+% \homepage{http://blog.mousset.me}
 
 
 \begin{document}
     \makecvtitle
 
     \section{Formation}
-        \cventry{2013 - aujourd'hui}{École d'ingénieur en Informatique et Systèmes d'Informations}{\newline Université de Technologie de Troyes (UTT)}{}{}{}
-        \cventry{2013}{Baccalauréat Scientifique}{\textnormal{Mention Bien}}{\textit{Lycée Paul Valery, Paris}}{}{}
+        \cventry{2013 - aujourd'hui}{École d'ingénieur en Informatique (4e année)}{Génie logiciel, systèmes embarqués}{Université de Technologie de Troyes (UTT)}{}{}
 
-    \section{Expérience profesionnelle et associative}
-            \cventry{2013 - aujourd'hui}{Club Robotik UTT}{Vice président}{}{Club de robotique étudiant}{
-                \begin{itemize}
-                  \item \href{https://github.com/RobotikUTT}{\faGithub \ Deux participations à la Coupe de France de robotique}
-                      \begin{itemize}
-                          \item Développement bas niveau C++ sur Arduino
-                          \item Développement haut niveau Node.js sur Beaglebone black
-                          \item Communication sur bus CAN
-                          \item Asservissement du mouvement: correcteurs PID, odométrie
-                      \end{itemize}
-                \end{itemize}}
+        \cventry{Automne 2016}{Semestre d'échange univerversitaire}{Robotique, intelligence articielle}{\newline KAIST (Corée du Sud)}{}{}
 
-            \cventry{2013 - 2014}{UTT Net Group}{Membre actif}{}{Association étudiante d'informatique}{
+        \cventry{2013}{Baccalauréat Scientifique}{Mention Bien}{Lycée Paul Valery, Paris}{}{}
+
+    \section{Expérience professionnelle et associative}
+            \cventry{2013 - aujourd'hui}{Club Robotik UTT}{Président}{}{Club de robotique étudiant}{
+                  \begin{itemize}
+                      \item Trois participations à la Coupe de France de robotique (2014, 2015, 2016)
+                      \item Développement bas niveau C/C++ sur ATmega328
+                      \item Développement haut niveau Node.js sur Beaglebone black
+                  \end{itemize}
+            }
+
+            \cventry{2015 - aujourd'hui}{Buckless}{Associé}{}{Startup dédiée au systèmes de paiement sans contact open-source}{
                 \begin{itemize}
-                  \item \href{https://github.com/buckutt}{\faGithub \ Développement de BuckUTT}
-                    \begin{itemize}
-                      \item Système de paiement électronique associatif (80k\texteuro \ par an)
-                      \item Node.js, AngularJS, MySQL
-                    \end{itemize}
-                \end{itemize}}
+                  \item Exemple : gestion du système de paiement associatif de l'UTT
+                  \item Technologies : Node.js / VueJS / RethinkDB
+                  \item Déploiement continu avec Docker et Travis CI
+                \end{itemize}
+            }
 
             \cventry{Eté 2013}{Développeur web}{Ligne bleue cyber}{Paris}{}{
                 \begin{itemize}
-                    \item Migration de base de données MySQL
-                    \item Site du Salon de l'Agriculture (Appel d'offre remporté)
+                    \item Intégration du site du Salon de l'Agriculture
                     \item Administration système
-                \end{itemize}}
+                \end{itemize}
+            }
 
+    \section{Projets}
+            \cventry{Automne 2016}{Robot à réalité virtuelle en temps réel}{}{}{}{
+                \begin{itemize}
+                    \item Développement d'un visualisateur vidéo 360° pour casque de réalité virtuelle
+                    \item Intégration sur BeagleBone/Google Cardboard/ROS
+                \end{itemize}
+            }            
+
+            \cventry{Novembre 2015}{ENSEAck - Hackathon électronique}{}{}{}{
+                \begin{itemize}
+                    \item Prototype fonctionnel de capteur solaire/éolien connecté
+                    \item Interface de visualisation temps des données en temps réel
+                \end{itemize}
+            }
 
 
     \section {Compétences techniques}
-        \cvitem{\textbf{Base de données}}{MySQL, MariaDB, MongoDB, RethinkDB}
-        \cvitem{\textbf{Languages}}{C, C++, Javascript (Node.js), Python, Haxe, Java}
-        \cvitem{\textbf{Plateformes}}{ODROID, Raspbery Pi, Beaglebone, Arduino}
-        \cvitem{\textbf{Microcontrôleurs}}{ATmega, msp430}
-        \cvitem{\textbf{Embarqué}}{Bus de communication, design de cartes éléctroniques}
-        \cvitem{\textbf{Automatique}}{Asservissement, fusion de capteurs}
+        \cvitem{\textbf{Langages}}{C, C++, Javascript, VHDL, Python, Java}
+        \cvitem{\textbf{Embarqué}}{FPGA, drivers linux, bus CAN/I2C/SPI, KiCAD}
+        \cvitem{\textbf{Microcontrôleurs}}{STM32, ATmega, msp430}
+        \cvitem{\textbf{Robotique}}{Asservissement, odometrie, path finding, fusion de capteurs}
 
     \section{Langues}
-        \cvitem{Anglais}{Bon niveau lu, écrit et parlé (\small{\textit{BULATS 89/100}})}
-        \cvitem{Espagnol}{Bases}
+        \cvitemwithcomment{Anglais}{Lu, parlé, écrit}{BULATS niveau B2}
+        \cvitemwithcomment{Coréen}{Bases}{Niveau A1}
 
-    \section{Centres d'intérêt}
-        \cvitem{Sports}{Natation, voile, baby-foot}
-        \cvitem{Hobbies}{Robotique, électronique, littérature}
+    % \section{Centres d'intérêt}
+    %     \cvitem{Hobbies}{Robotique, natation, baby-foot}
 
 \end{document}
 
